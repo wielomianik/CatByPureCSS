@@ -147,7 +147,7 @@ body {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   top: 50%;
-  left: 50.5%;
+  right: 44.5%;
   transform: translateX(-50%);
   width: 5%;
   height: 7%;
@@ -157,4 +157,81 @@ body {
   border-bottom-left-radius: 40%;
   transform: scale(-1, 1);
   rotate: -18deg;
+}
+.cat-head-frame .cat-moustahe-left-one {
+  transform: translateX(-50%);
+  z-index: 500;
+  position: absolute;
+  border-top: 0.3px solid black;
+  width: 15%;
+  height: 15%;
+  top: 53%;
+  left: 32%;
+  transform: rotate(-15deg);
+}
+.cat-head-frame .cat-moustahe-right-one {
+  transform: translateX(-50%);
+  z-index: 500;
+  position: absolute;
+  border-top: 0.3px solid black;
+  width: 15%;
+  height: 15%;
+  top: 53%;
+  right: 32%;
+  transform: rotate(15deg);
+}
+.cat-head-frame .cat-moustahe-left-two {
+  transform: translateX(-50%);
+  z-index: 500;
+  position: absolute;
+  border-top: 0.3px solid black;
+  width: 15%;
+  height: 15%;
+  top: 55%;
+  left: 34%;
+  transform: rotate(-25deg);
+}
+.cat-head-frame .cat-moustahe-right-two {
+  transform: translateX(-50%);
+  z-index: 500;
+  position: absolute;
+  border-top: 0.3px solid black;
+  width: 15%;
+  height: 15%;
+  top: 55%;
+  right: 34%;
+  transform: rotate(25deg);
+}
+.cat-head-frame .cat-moustahe-left-three {
+  transform: translateX(-50%);
+  z-index: 500;
+  position: absolute;
+  border-top: 0.3px solid black;
+  width: 15%;
+  height: 15%;
+  top: 57%;
+  left: 36%;
+  transform: rotate(-35deg);
+}
+.cat-head-frame .cat-moustahe-right-three {
+  transform: translateX(-50%);
+  z-index: 500;
+  position: absolute;
+  border-top: 0.3px solid black;
+  width: 15%;
+  height: 15%;
+  top: 57%;
+  right: 36%;
+  transform: rotate(35deg);
+}
+.cat-head-frame .cat-subeye-left {
+  z-index: 500;
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  background-image: linear-gradient(56deg, rgba(213, 213, 233, 0.229) 34%, rgba(0, 0, 0, 0.264) 78%);
+  border-top-left-radius: 70%;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 70%;
+  border-bottom-left-radius: 50%;
 }
