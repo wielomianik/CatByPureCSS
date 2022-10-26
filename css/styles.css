@@ -19,19 +19,27 @@ body {
   align-items: center;
   justify-content: center;
   width: 600px;
-  height: 300px;
+  height: 600px;
   background-color: white;
   box-shadow: 0px 0px 5px 5px black;
   border-radius: 5px;
 }
 
-.cat-head-frame {
-  position: relative;
-  width: 200px;
-  height: 200px;
+.cat {
+  position: absolute;
+  width: 80%;
+  height: 80%;
   border: 1px solid black;
 }
-.cat-head-frame .cat-head {
+.cat .cat-head-frame {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgb(180, 168, 168);
+}
+.cat .cat-head-frame .cat-head {
   position: absolute;
   top: 20%;
   left: 50%;
@@ -43,7 +51,7 @@ body {
   background-color: #fff;
   z-index: 5;
 }
-.cat-head-frame .cat-ear-right {
+.cat .cat-head-frame .cat-ear-right {
   position: absolute;
   border: 1px solid black;
   top: 17%;
@@ -56,7 +64,7 @@ body {
   border-bottom-left-radius: 0%;
   transform: translateX(-50%);
 }
-.cat-head-frame .cat-ear-left {
+.cat .cat-head-frame .cat-ear-left {
   position: absolute;
   border: 1px solid black;
   top: 17%;
@@ -69,7 +77,7 @@ body {
   border-bottom-left-radius: 50%;
   transform: translateX(-50%);
 }
-.cat-head-frame .cat-eye-left {
+.cat .cat-head-frame .cat-eye-left {
   z-index: 1000;
   position: absolute;
   border: 1px solid black;
@@ -83,7 +91,7 @@ body {
   border-bottom-left-radius: 50%;
   transform: translateX(-50%);
 }
-.cat-head-frame .cat-eye-right {
+.cat .cat-head-frame .cat-eye-right {
   z-index: 1000;
   position: absolute;
   border: 1px solid black;
@@ -97,7 +105,7 @@ body {
   border-bottom-left-radius: 70%;
   transform: translateX(-50%);
 }
-.cat-head-frame .cat-nose {
+.cat .cat-head-frame .cat-nose {
   z-index: 1000;
   position: absolute;
   border: 1px solid black;
@@ -111,7 +119,7 @@ body {
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 30%;
 }
-.cat-head-frame .cat-nose .cat-nose-warm {
+.cat .cat-head-frame .cat-nose .cat-nose-warm {
   z-index: 1000;
   position: relative;
   background-color: rgb(189, 122, 122);
@@ -123,7 +131,7 @@ body {
   border-bottom-right-radius: 20%;
   border-bottom-left-radius: 20%;
 }
-.cat-head-frame .cat-mouth-left {
+.cat .cat-head-frame .cat-mouth-left {
   z-index: 500;
   position: absolute;
   border-left: 1px solid white;
@@ -140,7 +148,7 @@ body {
   border-bottom-left-radius: 40%;
   transform: rotate(18deg);
 }
-.cat-head-frame .cat-mouth-right {
+.cat .cat-head-frame .cat-mouth-right {
   z-index: 500;
   position: absolute;
   border-left: 1px solid white;
@@ -158,7 +166,7 @@ body {
   transform: scale(-1, 1);
   rotate: -18deg;
 }
-.cat-head-frame .cat-moustahe-left-one {
+.cat .cat-head-frame .cat-moustahe-left-one {
   transform: translateX(-50%);
   z-index: 500;
   position: absolute;
@@ -169,7 +177,7 @@ body {
   left: 32%;
   transform: rotate(-15deg);
 }
-.cat-head-frame .cat-moustahe-right-one {
+.cat .cat-head-frame .cat-moustahe-right-one {
   transform: translateX(-50%);
   z-index: 500;
   position: absolute;
@@ -180,7 +188,7 @@ body {
   right: 32%;
   transform: rotate(15deg);
 }
-.cat-head-frame .cat-moustahe-left-two {
+.cat .cat-head-frame .cat-moustahe-left-two {
   transform: translateX(-50%);
   z-index: 500;
   position: absolute;
@@ -191,7 +199,7 @@ body {
   left: 34%;
   transform: rotate(-25deg);
 }
-.cat-head-frame .cat-moustahe-right-two {
+.cat .cat-head-frame .cat-moustahe-right-two {
   transform: translateX(-50%);
   z-index: 500;
   position: absolute;
@@ -202,7 +210,7 @@ body {
   right: 34%;
   transform: rotate(25deg);
 }
-.cat-head-frame .cat-moustahe-left-three {
+.cat .cat-head-frame .cat-moustahe-left-three {
   transform: translateX(-50%);
   z-index: 500;
   position: absolute;
@@ -213,7 +221,7 @@ body {
   left: 36%;
   transform: rotate(-35deg);
 }
-.cat-head-frame .cat-moustahe-right-three {
+.cat .cat-head-frame .cat-moustahe-right-three {
   transform: translateX(-50%);
   z-index: 500;
   position: absolute;
@@ -224,7 +232,7 @@ body {
   right: 36%;
   transform: rotate(35deg);
 }
-.cat-head-frame .cat-subeye-left {
+.cat .cat-head-frame .cat-subeye-bg-left {
   z-index: 500;
   position: absolute;
   width: 102%;
@@ -234,4 +242,73 @@ body {
   border-top-right-radius: 40%;
   border-bottom-right-radius: 70%;
   border-bottom-left-radius: 50%;
+}
+.cat .cat-head-frame .cat-subeye-left {
+  z-index: 500;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 40%;
+  left: 4%;
+  background-color: black;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 70%;
+  border-bottom-left-radius: 50%;
+}
+.cat .cat-head-frame .cat-subeye-bg-right {
+  z-index: 500;
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  background-image: linear-gradient(56deg, rgba(213, 213, 233, 0.229) 34%, rgba(0, 0, 0, 0.264) 78%);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 70%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 70%;
+}
+.cat .cat-head-frame .cat-subeye-right {
+  z-index: 500;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 40%;
+  left: 8%;
+  background-color: black;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 70%;
+  border-bottom-left-radius: 50%;
+}
+.cat .cat-body-frame {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  border: 1px solid black;
+}
+.cat .cat-body-frame .cat-body {
+  position: absolute;
+  top: 36%;
+  left: 45%;
+  width: 40%;
+  height: 30%;
+  border: 1px solid black;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 40%;
+  transform: rotate(5deg);
+}
+.cat .cat-body-frame .cat-tail {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 15%;
+  height: 5%;
+  border-left: 1px solid white;
+  border-bottom: 1px solid black;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 40%;
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
 }
