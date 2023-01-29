@@ -13,6 +13,79 @@ body {
     background-color: #333;
 }
 
+// ┌─────────────────────────────────────────────────────────────────────────┐
+// │ GLOBAL VARIABLES                                                        │
+// └─────────────────────────────────────────────────────────────────────────┘
+
+$tail-color: #f9e2af;
+$border-color: #00000057;
+
+// ┌─────────────────────────────────────────────────────────────────────────┐
+// │ KEYFRAMES                                                               │
+// └─────────────────────────────────────────────────────────────────────────┘
+
+@keyframes walk-leg-left {
+    0% {
+        transform: rotate(75deg);
+        top: 59%;
+    }
+
+    50% {
+        transform: rotate(100deg);
+        top: 58%;
+    }
+
+    100% {
+        transform: rotate(75deg);
+        top: 59%;
+    }
+}
+
+@keyframes walk-leg-left-pillow {
+    0% {
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-13deg);
+    }
+
+    100% {
+        transform: rotate(13deg);
+    }
+}
+
+@keyframes walk-leg-left-center {
+    0% {
+        transform: rotate(75deg);
+        top: 58%;
+    }
+
+    50% {
+        transform: rotate(100deg);
+        top: 57%;
+    }
+
+    100% {
+        transform: rotate(75deg);
+        top: 58%;
+    }
+}
+
+@keyframes walk-leg-left-center-pillow {
+    0% {
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-13deg);
+    }
+
+    100% {
+        transform: rotate(13deg);
+    }
+}
+
 .cat-box {
     position: relative;
     display: flex;
@@ -29,7 +102,7 @@ body {
     position: absolute;
     width: 80%;
     height: 80%;
-    border: 1px solid black;
+    //border: 1px solid black;
 
     .cat-head-frame {
         position: absolute;
@@ -37,8 +110,8 @@ body {
         top: 5%;
         width: 50%;
         height: 50%;
-        border: 1px solid rgb(180, 168, 168);
-    
+        //border: 1px solid rgb(180, 168, 168);
+
         .cat-head {
             position: absolute;
             top: 21%;
@@ -46,15 +119,15 @@ body {
             transform: translateX(-50%);
             width: 66%;
             height: 56%;
-            border: 1px solid black;
+            border: 1px solid $border-color;
             border-radius: 50%;
             background-color: #fff;
             z-index: 500;
         }
-        
+
         .cat-ear-right {
             position: absolute;
-            border: 1px solid black;
+            border: 1px solid $border-color;
             top: 20%;
             left: 75%;
             width: 20%;
@@ -65,10 +138,26 @@ body {
             border-bottom-left-radius: 0%;
             transform: translateX(-50%);
         }
-        
+
+        .cat-ear-right::after {
+            content: "";
+            position: absolute;
+            border: 1px solid $border-color;
+            top: 15%;
+            left: 45%;
+            background: #fee4df;
+            width: 80%;
+            height: 80%;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 30%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 0%;
+            transform: translateX(-50%);
+        }
+
         .cat-ear-left {
             position: absolute;
-            border: 1px solid black;
+            border: 1px solid $border-color;
             top: 20%;
             left: 25%;
             width: 20%;
@@ -79,7 +168,23 @@ body {
             border-bottom-left-radius: 50%;
             transform: translateX(-50%);
         }
-        
+
+        .cat-ear-left::after {
+            content: "";
+            position: absolute;
+            border: 1px solid $border-color;
+            top: 15%;
+            left: 55%;
+            background: #fee4df;
+            width: 80%;
+            height: 80%;
+            border-top-left-radius: 30%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 0%;
+            border-bottom-left-radius: 50%;
+            transform: translateX(-50%);
+        }
+
         .cat-eye-left {
             z-index: 1000;
             position: absolute;
@@ -94,7 +199,7 @@ body {
             border-bottom-left-radius: 50%;
             transform: translateX(-50%);
         }
-    
+
         .cat-eye-right {
             z-index: 1000;
             position: absolute;
@@ -109,7 +214,7 @@ body {
             border-bottom-left-radius: 70%;
             transform: translateX(-50%);
         }
-    
+
         .cat-nose {
             z-index: 1000;
             position: absolute;
@@ -123,7 +228,7 @@ body {
             border-top-right-radius: 70%;
             border-bottom-right-radius: 30%;
             border-bottom-left-radius: 30%;
-    
+
             .cat-nose-warm {
                 z-index: 1000;
                 position: relative;
@@ -136,9 +241,8 @@ body {
                 border-bottom-right-radius: 20%;
                 border-bottom-left-radius: 20%;
             }
-    
         }
-    
+
         .cat-mouth-left {
             z-index: 500;
             position: absolute;
@@ -156,7 +260,7 @@ body {
             border-bottom-left-radius: 40%;
             transform: rotate(18deg);
         }
-    
+
         .cat-mouth-right {
             z-index: 500;
             position: absolute;
@@ -175,7 +279,7 @@ body {
             transform: scale(-1, 1);
             rotate: (-18deg);
         }
-    
+
         .cat-moustahe-left-one {
             transform: translateX(-50%);
             z-index: 500;
@@ -187,7 +291,7 @@ body {
             left: 32%;
             transform: rotate(-15deg);
         }
-    
+
         .cat-moustahe-right-one {
             transform: translateX(-50%);
             z-index: 500;
@@ -199,7 +303,7 @@ body {
             right: 32%;
             transform: rotate(15deg);
         }
-    
+
         .cat-moustahe-left-two {
             transform: translateX(-50%);
             z-index: 500;
@@ -211,7 +315,7 @@ body {
             left: 34%;
             transform: rotate(-25deg);
         }
-    
+
         .cat-moustahe-right-two {
             transform: translateX(-50%);
             z-index: 500;
@@ -223,7 +327,7 @@ body {
             right: 34%;
             transform: rotate(25deg);
         }
-    
+
         .cat-moustahe-left-three {
             transform: translateX(-50%);
             z-index: 500;
@@ -235,7 +339,7 @@ body {
             left: 36%;
             transform: rotate(-35deg);
         }
-    
+
         .cat-moustahe-right-three {
             transform: translateX(-50%);
             z-index: 500;
@@ -247,7 +351,7 @@ body {
             right: 36%;
             transform: rotate(35deg);
         }
-    
+
         .cat-subeye-bg-left {
             z-index: 500;
             position: absolute;
@@ -259,7 +363,7 @@ body {
             border-bottom-right-radius: 70%;
             border-bottom-left-radius: 50%;
         }
-    
+
         .cat-subeye-left {
             z-index: 500;
             position: absolute;
@@ -274,7 +378,7 @@ body {
             border-bottom-left-radius: 50%;
             transform: rotate(317deg);
         }
-    
+
         .cat-subeye-bg-right {
             z-index: 500;
             position: absolute;
@@ -286,7 +390,7 @@ body {
             border-bottom-right-radius: 50%;
             border-bottom-left-radius: 70%;
         }
-    
+
         .cat-subeye-right {
             z-index: 500;
             position: absolute;
@@ -307,7 +411,7 @@ body {
         position: absolute;
         width: 100%;
         height: 80%;
-        border: 1px solid black;
+        //border: 1px solid black;
 
         .cat-body {
             z-index: 100;
@@ -317,7 +421,7 @@ body {
             left: 45%;
             width: 40%;
             height: 30%;
-            border: 1px solid black;
+            border: 1px solid $border-color;
             border-top-left-radius: 49% 75%;
             border-top-right-radius: 75%;
             border-bottom-right-radius: 69% 60%;
@@ -325,7 +429,7 @@ body {
             transform: rotate(3deg);
         }
 
-        .cat-tail {
+        /*.cat-tail {
             position: absolute;
             top: 24%;
             left: 50%;
@@ -334,9 +438,51 @@ body {
             border-radius: 50%;
             box-shadow: 9px 15px 0 0 black;
             transform: rotate(105deg);
+        }*/
+
+        .cat-tail-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 20%;
+            top: 5%;
         }
 
-        .cat-leg-left-down {
+        .cat-tail {
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            width: 15%;
+            height: 25%;
+            left: 17%;
+            top: 23%;
+            border-bottom-left-radius: 85%;
+            border-bottom-right-radius: 0%;
+            border-top-left-radius: 25%;
+            border-top-right-radius: 0%;
+            border-left: 2px solid $border-color;
+            box-shadow: inset 4px -3px 1px 0px $tail-color, inset 5px -1px 0px 0px $tail-color,
+                inset 6px -3px 1px 0px $tail-color, inset 5px -15px 0px 0px $tail-color,
+                inset 4px -20px 0px 0px $tail-color, inset 5px -20px 0px 0px $tail-color;
+        }
+
+        .cat-lait {
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            width: 15%;
+            height: 25%;
+            border-bottom-left-radius: 80%;
+            border-bottom-right-radius: 0%;
+            border-top-left-radius: 25%;
+            border-top-right-radius: 0%;
+            border-left: 2px solid $border-color;
+            left: 20%;
+            top: 21%;
+            transform: rotate(342deg);
+        }
+
+        .cat-leg-left {
             z-index: 90;
             position: absolute;
             background-color: #fdf4f5;
@@ -350,8 +496,9 @@ body {
             border-bottom-right-radius: 80%;
             border-top-right-radius: 30%;
             transform: rotate(75deg);
+            animation: walk-leg-left infinite 2s;
 
-            .cat-leg-left-down-pillow {
+            .cat-leg-left-pillow {
                 z-index: 95;
                 position: absolute;
                 background-color: #fdf4f5;
@@ -362,10 +509,11 @@ body {
                 border-radius: 50% 39% 50% 50%;
                 transform: rotate(13deg);
                 border: 1px solid black;
+                animation: walk-leg-left-pillow infinite 2s;
             }
         }
 
-        .cat-leg-left-up {
+        .cat-leg-left-center {
             z-index: 80;
             position: absolute;
             background-color: #fdf4f5;
@@ -379,8 +527,10 @@ body {
             border-bottom-right-radius: 80%;
             border-top-right-radius: 30%;
             transform: rotate(75deg);
+            animation: walk-leg-left-center infinite 2s;
+            animation-delay: 1s;
 
-            .cat-leg-left-up-pillow {
+            .cat-leg-left-center-pillow {
                 z-index: 95;
                 position: absolute;
                 background-color: #fdf4f5;
@@ -391,10 +541,12 @@ body {
                 border-radius: 50% 39% 50% 50%;
                 transform: rotate(13deg);
                 border: 1px solid black;
+                animation: walk-leg-left-center-pillow infinite 2s;
+                animation-delay: 1s;
             }
         }
 
-        .cat-leg-right-down {
+        .cat-leg-right {
             z-index: 80;
             position: absolute;
             background-color: #fdf4f5;
@@ -409,7 +561,7 @@ body {
             border-top-right-radius: 30%;
             transform: rotate(75deg);
 
-            .cat-leg-right-down-pillow {
+            .cat-leg-right-pillow {
                 z-index: 95;
                 position: absolute;
                 background-color: #fdf4f5;
@@ -423,7 +575,7 @@ body {
             }
         }
 
-        .cat-leg-right-up {
+        .cat-leg-right-center {
             z-index: 80;
             position: absolute;
             background-color: #fdf4f5;
@@ -438,7 +590,7 @@ body {
             border-top-right-radius: 30%;
             transform: rotate(75deg);
 
-            .cat-leg-right-up-pillow {
+            .cat-leg-right-center-pillow {
                 z-index: 95;
                 position: absolute;
                 background-color: #fdf4f5;
@@ -451,7 +603,5 @@ body {
                 border: 1px solid black;
             }
         }
-
     }
-
 }
