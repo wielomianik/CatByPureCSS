@@ -230,6 +230,8 @@ body {
   position: absolute;
   width: 80%;
   height: 80%;
+  top: 18%;
+  right: 22%;
 }
 .cat .cat-head-frame {
   position: absolute;
@@ -645,11 +647,11 @@ body {
           animation: cat-leg-two-pillow-walk infinite 2s;
 }
 .cat .cat-body-frame .cat-leg-three {
-  z-index: 80;
+  z-index: 90;
   position: absolute;
   background-color: #f9e2af;
   top: 59%;
-  left: 58%;
+  left: 61%;
   width: 20%;
   height: 6%;
   border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
@@ -664,7 +666,7 @@ body {
           animation-delay: 1s;
 }
 .cat .cat-body-frame .cat-leg-three .cat-leg-three-pillow {
-  z-index: 95;
+  z-index: 90;
   position: absolute;
   background-color: #f9e2af;
   top: -71%;
@@ -684,7 +686,7 @@ body {
   position: absolute;
   background-color: #f9e2af;
   top: 58%;
-  left: 67%;
+  left: 68%;
   width: 20%;
   height: 6%;
   border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
@@ -697,7 +699,7 @@ body {
           animation: cat-leg-four-walk infinite 2s;
 }
 .cat .cat-body-frame .cat-leg-four .cat-leg-four-pillow {
-  z-index: 95;
+  z-index: 85;
   position: absolute;
   background-color: #f9e2af;
   top: -71%;

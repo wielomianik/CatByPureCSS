@@ -169,6 +169,8 @@ $leg-delay: 1s;
     position: absolute;
     width: 80%;
     height: 80%;
+    top: 18%;
+    right: 22%;
 
     .cat-head-frame {
         position: absolute;
@@ -612,11 +614,11 @@ $leg-delay: 1s;
         }
 
         .cat-leg-three {
-            z-index: 80;
+            z-index: 90;
             position: absolute;
             background-color: $body-color;
             top: 59%;
-            left: 58%;
+            left: 61%;
             width: 20%;
             height: 6%;
             border: $border-size solid $border-color;
@@ -629,7 +631,7 @@ $leg-delay: 1s;
             animation-delay: $leg-delay;
 
             .cat-leg-three-pillow {
-                z-index: 95;
+                z-index: 90;
                 position: absolute;
                 background-color: $body-color;
                 top: -71%;
@@ -649,7 +651,7 @@ $leg-delay: 1s;
             position: absolute;
             background-color: $body-color;
             top: 58%;
-            left: 67%;
+            left: 68%;
             width: 20%;
             height: 6%;
             border: $border-size solid $border-color;
@@ -661,7 +663,7 @@ $leg-delay: 1s;
             animation: cat-leg-four-walk infinite $cat-speed;
 
             .cat-leg-four-pillow {
-                z-index: 95;
+                z-index: 85;
                 position: absolute;
                 background-color: $body-color;
                 top: -71%;
