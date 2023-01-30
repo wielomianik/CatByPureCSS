@@ -17,14 +17,19 @@ body {
 // │ GLOBAL VARIABLES                                                        │
 // └─────────────────────────────────────────────────────────────────────────┘
 
-$tail-color: #f9e2af;
+$body-color: #f9e2af;
+
+$border-size: 1.5px;
 $border-color: #00000057;
+
+$cat-speed: 2s;
+$leg-delay: 1s;
 
 // ┌─────────────────────────────────────────────────────────────────────────┐
 // │ KEYFRAMES                                                               │
 // └─────────────────────────────────────────────────────────────────────────┘
 
-@keyframes walk-leg-left {
+@keyframes cat-leg-one-walk {
     0% {
         transform: rotate(75deg);
         top: 59%;
@@ -41,7 +46,7 @@ $border-color: #00000057;
     }
 }
 
-@keyframes walk-leg-left-pillow {
+@keyframes cat-leg-one-pillow-walk {
     0% {
         transform: rotate(13deg);
     }
@@ -55,7 +60,7 @@ $border-color: #00000057;
     }
 }
 
-@keyframes walk-leg-left-center {
+@keyframes cat-leg-two-walk {
     0% {
         transform: rotate(75deg);
         top: 58%;
@@ -72,7 +77,69 @@ $border-color: #00000057;
     }
 }
 
-@keyframes walk-leg-left-center-pillow {
+@keyframes cat-leg-two-pillow-walk {
+    0% {
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-13deg);
+    }
+
+    100% {
+        transform: rotate(13deg);
+    }
+}
+
+@keyframes cat-leg-three-walk {
+    0% {
+        transform: rotate(75deg);
+        top: 59%;
+    }
+
+    50% {
+        transform: rotate(100deg);
+        top: 58%;
+    }
+
+    100% {
+        transform: rotate(75deg);
+        top: 59%;
+    }
+}
+
+@keyframes cat-leg-three-pillow-walk {
+    0% {
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-13deg);
+    }
+
+    100% {
+        transform: rotate(13deg);
+    }
+}
+
+@keyframes cat-leg-four-walk {
+    0% {
+        transform: rotate(75deg);
+        top: 58%;
+    }
+
+    50% {
+        transform: rotate(100deg);
+        top: 57%;
+    }
+
+    100% {
+        transform: rotate(75deg);
+        top: 58%;
+    }
+}
+
+@keyframes cat-leg-four-pillow-walk {
     0% {
         transform: rotate(13deg);
     }
@@ -102,7 +169,6 @@ $border-color: #00000057;
     position: absolute;
     width: 80%;
     height: 80%;
-    //border: 1px solid black;
 
     .cat-head-frame {
         position: absolute;
@@ -110,7 +176,6 @@ $border-color: #00000057;
         top: 5%;
         width: 50%;
         height: 50%;
-        //border: 1px solid rgb(180, 168, 168);
 
         .cat-head {
             position: absolute;
@@ -119,15 +184,16 @@ $border-color: #00000057;
             transform: translateX(-50%);
             width: 66%;
             height: 56%;
-            border: 1px solid $border-color;
+            border: $border-size solid $border-color;
             border-radius: 50%;
-            background-color: #fff;
+            background-color: $body-color;
             z-index: 500;
         }
 
         .cat-ear-right {
             position: absolute;
-            border: 1px solid $border-color;
+            border: $border-size solid $border-color;
+            background-color: $body-color;
             top: 20%;
             left: 75%;
             width: 20%;
@@ -157,7 +223,8 @@ $border-color: #00000057;
 
         .cat-ear-left {
             position: absolute;
-            border: 1px solid $border-color;
+            border: $border-size solid $border-color;
+            background-color: $body-color;
             top: 20%;
             left: 25%;
             width: 20%;
@@ -246,7 +313,6 @@ $border-color: #00000057;
         .cat-mouth-left {
             z-index: 500;
             position: absolute;
-            border-left: 1px solid white;
             border-right: 1px solid black;
             border-bottom: 1px solid black;
             top: 50%;
@@ -264,7 +330,6 @@ $border-color: #00000057;
         .cat-mouth-right {
             z-index: 500;
             position: absolute;
-            border-left: 1px solid white;
             border-right: 1px solid black;
             border-bottom: 1px solid black;
             top: 50%;
@@ -416,12 +481,12 @@ $border-color: #00000057;
         .cat-body {
             z-index: 100;
             position: absolute;
-            background-color: #fdf4f5;
+            background-color: $body-color;
             top: 36%;
             left: 45%;
             width: 40%;
             height: 30%;
-            border: 1px solid $border-color;
+            border: $border-size solid $border-color;
             border-top-left-radius: 49% 75%;
             border-top-right-radius: 75%;
             border-bottom-right-radius: 69% 60%;
@@ -461,9 +526,9 @@ $border-color: #00000057;
             border-top-left-radius: 25%;
             border-top-right-radius: 0%;
             border-left: 2px solid $border-color;
-            box-shadow: inset 4px -3px 1px 0px $tail-color, inset 5px -1px 0px 0px $tail-color,
-                inset 6px -3px 1px 0px $tail-color, inset 5px -15px 0px 0px $tail-color,
-                inset 4px -20px 0px 0px $tail-color, inset 5px -20px 0px 0px $tail-color;
+            box-shadow: inset 4px -3px 1px 0px $body-color, inset 5px -1px 0px 0px $body-color,
+                inset 6px -3px 1px 0px $body-color, inset 5px -15px 0px 0px $body-color,
+                inset 4px -20px 0px 0px $body-color, inset 5px -20px 0px 0px $body-color;
         }
 
         .cat-lait {
@@ -482,125 +547,131 @@ $border-color: #00000057;
             transform: rotate(342deg);
         }
 
-        .cat-leg-left {
+        .cat-leg-one {
             z-index: 90;
             position: absolute;
-            background-color: #fdf4f5;
+            background-color: $body-color;
             top: 59%;
             left: 42%;
             width: 20%;
             height: 6%;
-            border: 1px solid black;
+            border: $border-size solid $border-color;
             border-bottom-left-radius: 40%;
             border-top-left-radius: 100%;
             border-bottom-right-radius: 80%;
             border-top-right-radius: 30%;
             transform: rotate(75deg);
-            animation: walk-leg-left infinite 2s;
+            animation: cat-leg-one-walk infinite $cat-speed;
+            animation-delay: $leg-delay;
 
-            .cat-leg-left-pillow {
+            .cat-leg-one-pillow {
                 z-index: 95;
                 position: absolute;
-                background-color: #fdf4f5;
+                background-color: $body-color;
                 top: -71%;
                 left: 79%;
                 width: 29%;
                 height: 175%;
                 border-radius: 50% 39% 50% 50%;
                 transform: rotate(13deg);
-                border: 1px solid black;
-                animation: walk-leg-left-pillow infinite 2s;
+                border: $border-size solid $border-color;
+                animation: cat-leg-one-pillow-walk infinite $cat-speed;
+                animation-delay: $leg-delay;
             }
         }
 
-        .cat-leg-left-center {
+        .cat-leg-two {
             z-index: 80;
             position: absolute;
-            background-color: #fdf4f5;
+            background-color: $body-color;
             top: 58%;
             left: 47%;
             width: 20%;
             height: 6%;
-            border: 1px solid black;
+            border: $border-size solid $border-color;
             border-bottom-left-radius: 40%;
             border-top-left-radius: 100%;
             border-bottom-right-radius: 80%;
             border-top-right-radius: 30%;
             transform: rotate(75deg);
-            animation: walk-leg-left-center infinite 2s;
-            animation-delay: 1s;
+            animation: cat-leg-two-walk infinite $cat-speed;
 
-            .cat-leg-left-center-pillow {
+            .cat-leg-two-pillow {
                 z-index: 95;
                 position: absolute;
-                background-color: #fdf4f5;
+                background-color: $body-color;
                 top: -71%;
                 left: 79%;
                 width: 29%;
                 height: 175%;
                 border-radius: 50% 39% 50% 50%;
                 transform: rotate(13deg);
-                border: 1px solid black;
-                animation: walk-leg-left-center-pillow infinite 2s;
-                animation-delay: 1s;
+                border: $border-size solid $border-color;
+                animation: cat-leg-two-pillow-walk infinite $cat-speed;
             }
         }
 
-        .cat-leg-right {
+        .cat-leg-three {
             z-index: 80;
             position: absolute;
-            background-color: #fdf4f5;
+            background-color: $body-color;
             top: 59%;
             left: 58%;
             width: 20%;
             height: 6%;
-            border: 1px solid black;
+            border: $border-size solid $border-color;
             border-bottom-left-radius: 40%;
             border-top-left-radius: 100%;
             border-bottom-right-radius: 80%;
             border-top-right-radius: 30%;
             transform: rotate(75deg);
+            animation: cat-leg-three-walk infinite $cat-speed;
+            animation-delay: $leg-delay;
 
-            .cat-leg-right-pillow {
+            .cat-leg-three-pillow {
                 z-index: 95;
                 position: absolute;
-                background-color: #fdf4f5;
+                background-color: $body-color;
                 top: -71%;
                 left: 79%;
                 width: 29%;
                 height: 175%;
                 border-radius: 50% 39% 50% 50%;
                 transform: rotate(13deg);
-                border: 1px solid black;
+                border: $border-size solid $border-color;
+                animation: cat-leg-three-pillow-walk infinite $cat-speed;
+                animation-delay: $leg-delay;
             }
         }
 
-        .cat-leg-right-center {
+        .cat-leg-four {
             z-index: 80;
             position: absolute;
-            background-color: #fdf4f5;
+            background-color: $body-color;
             top: 58%;
             left: 67%;
             width: 20%;
             height: 6%;
-            border: 1px solid black;
+            border: $border-size solid $border-color;
             border-bottom-left-radius: 40%;
             border-top-left-radius: 100%;
             border-bottom-right-radius: 80%;
             border-top-right-radius: 30%;
             transform: rotate(75deg);
+            animation: cat-leg-four-walk infinite $cat-speed;
 
-            .cat-leg-right-center-pillow {
+            .cat-leg-four-pillow {
                 z-index: 95;
                 position: absolute;
-                background-color: #fdf4f5;
+                background-color: $body-color;
                 top: -71%;
                 left: 79%;
                 width: 29%;
                 height: 175%;
                 border-radius: 50% 39% 50% 50%;
                 transform: rotate(13deg);
-                border: 1px solid black;
+                border: $border-size solid $border-color;
+                animation: cat-leg-four-pillow-walk infinite $cat-speed;
             }
         }
     }

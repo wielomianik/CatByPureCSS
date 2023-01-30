@@ -13,7 +13,7 @@ body {
   background-color: #333;
 }
 
-@-webkit-keyframes walk-leg-left {
+@-webkit-keyframes cat-leg-one-walk {
   0% {
     transform: rotate(75deg);
     top: 59%;
@@ -28,7 +28,7 @@ body {
   }
 }
 
-@keyframes walk-leg-left {
+@keyframes cat-leg-one-walk {
   0% {
     transform: rotate(75deg);
     top: 59%;
@@ -42,7 +42,7 @@ body {
     top: 59%;
   }
 }
-@-webkit-keyframes walk-leg-left-pillow {
+@-webkit-keyframes cat-leg-one-pillow-walk {
   0% {
     transform: rotate(13deg);
   }
@@ -53,7 +53,7 @@ body {
     transform: rotate(13deg);
   }
 }
-@keyframes walk-leg-left-pillow {
+@keyframes cat-leg-one-pillow-walk {
   0% {
     transform: rotate(13deg);
   }
@@ -64,7 +64,7 @@ body {
     transform: rotate(13deg);
   }
 }
-@-webkit-keyframes walk-leg-left-center {
+@-webkit-keyframes cat-leg-two-walk {
   0% {
     transform: rotate(75deg);
     top: 58%;
@@ -78,7 +78,7 @@ body {
     top: 58%;
   }
 }
-@keyframes walk-leg-left-center {
+@keyframes cat-leg-two-walk {
   0% {
     transform: rotate(75deg);
     top: 58%;
@@ -92,7 +92,7 @@ body {
     top: 58%;
   }
 }
-@-webkit-keyframes walk-leg-left-center-pillow {
+@-webkit-keyframes cat-leg-two-pillow-walk {
   0% {
     transform: rotate(13deg);
   }
@@ -103,7 +103,107 @@ body {
     transform: rotate(13deg);
   }
 }
-@keyframes walk-leg-left-center-pillow {
+@keyframes cat-leg-two-pillow-walk {
+  0% {
+    transform: rotate(13deg);
+  }
+  50% {
+    transform: rotate(-13deg);
+  }
+  100% {
+    transform: rotate(13deg);
+  }
+}
+@-webkit-keyframes cat-leg-three-walk {
+  0% {
+    transform: rotate(75deg);
+    top: 59%;
+  }
+  50% {
+    transform: rotate(100deg);
+    top: 58%;
+  }
+  100% {
+    transform: rotate(75deg);
+    top: 59%;
+  }
+}
+@keyframes cat-leg-three-walk {
+  0% {
+    transform: rotate(75deg);
+    top: 59%;
+  }
+  50% {
+    transform: rotate(100deg);
+    top: 58%;
+  }
+  100% {
+    transform: rotate(75deg);
+    top: 59%;
+  }
+}
+@-webkit-keyframes cat-leg-three-pillow-walk {
+  0% {
+    transform: rotate(13deg);
+  }
+  50% {
+    transform: rotate(-13deg);
+  }
+  100% {
+    transform: rotate(13deg);
+  }
+}
+@keyframes cat-leg-three-pillow-walk {
+  0% {
+    transform: rotate(13deg);
+  }
+  50% {
+    transform: rotate(-13deg);
+  }
+  100% {
+    transform: rotate(13deg);
+  }
+}
+@-webkit-keyframes cat-leg-four-walk {
+  0% {
+    transform: rotate(75deg);
+    top: 58%;
+  }
+  50% {
+    transform: rotate(100deg);
+    top: 57%;
+  }
+  100% {
+    transform: rotate(75deg);
+    top: 58%;
+  }
+}
+@keyframes cat-leg-four-walk {
+  0% {
+    transform: rotate(75deg);
+    top: 58%;
+  }
+  50% {
+    transform: rotate(100deg);
+    top: 57%;
+  }
+  100% {
+    transform: rotate(75deg);
+    top: 58%;
+  }
+}
+@-webkit-keyframes cat-leg-four-pillow-walk {
+  0% {
+    transform: rotate(13deg);
+  }
+  50% {
+    transform: rotate(-13deg);
+  }
+  100% {
+    transform: rotate(13deg);
+  }
+}
+@keyframes cat-leg-four-pillow-walk {
   0% {
     transform: rotate(13deg);
   }
@@ -145,14 +245,15 @@ body {
   transform: translateX(-50%);
   width: 66%;
   height: 56%;
-  border: 1px solid rgba(0, 0, 0, 0.3411764706);
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #f9e2af;
   z-index: 500;
 }
 .cat .cat-head-frame .cat-ear-right {
   position: absolute;
-  border: 1px solid rgba(0, 0, 0, 0.3411764706);
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
+  background-color: #f9e2af;
   top: 20%;
   left: 75%;
   width: 20%;
@@ -180,7 +281,8 @@ body {
 }
 .cat .cat-head-frame .cat-ear-left {
   position: absolute;
-  border: 1px solid rgba(0, 0, 0, 0.3411764706);
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
+  background-color: #f9e2af;
   top: 20%;
   left: 25%;
   width: 20%;
@@ -263,7 +365,6 @@ body {
 .cat .cat-head-frame .cat-mouth-left {
   z-index: 500;
   position: absolute;
-  border-left: 1px solid white;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   top: 50%;
@@ -280,7 +381,6 @@ body {
 .cat .cat-head-frame .cat-mouth-right {
   z-index: 500;
   position: absolute;
-  border-left: 1px solid white;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   top: 50%;
@@ -429,12 +529,12 @@ body {
 .cat .cat-body-frame .cat-body {
   z-index: 100;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: 36%;
   left: 45%;
   width: 40%;
   height: 30%;
-  border: 1px solid rgba(0, 0, 0, 0.3411764706);
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
   border-top-left-radius: 49% 75%;
   border-top-right-radius: 75%;
   border-bottom-right-radius: 69% 60%;
@@ -478,123 +578,135 @@ body {
   top: 21%;
   transform: rotate(342deg);
 }
-.cat .cat-body-frame .cat-leg-left {
+.cat .cat-body-frame .cat-leg-one {
   z-index: 90;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: 59%;
   left: 42%;
   width: 20%;
   height: 6%;
-  border: 1px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
   border-bottom-left-radius: 40%;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 80%;
   border-top-right-radius: 30%;
   transform: rotate(75deg);
-  -webkit-animation: walk-leg-left infinite 2s;
-          animation: walk-leg-left infinite 2s;
+  -webkit-animation: cat-leg-one-walk infinite 2s;
+          animation: cat-leg-one-walk infinite 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
-.cat .cat-body-frame .cat-leg-left .cat-leg-left-pillow {
+.cat .cat-body-frame .cat-leg-one .cat-leg-one-pillow {
   z-index: 95;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: -71%;
   left: 79%;
   width: 29%;
   height: 175%;
   border-radius: 50% 39% 50% 50%;
   transform: rotate(13deg);
-  border: 1px solid black;
-  -webkit-animation: walk-leg-left-pillow infinite 2s;
-          animation: walk-leg-left-pillow infinite 2s;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
+  -webkit-animation: cat-leg-one-pillow-walk infinite 2s;
+          animation: cat-leg-one-pillow-walk infinite 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
-.cat .cat-body-frame .cat-leg-left-center {
+.cat .cat-body-frame .cat-leg-two {
   z-index: 80;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: 58%;
   left: 47%;
   width: 20%;
   height: 6%;
-  border: 1px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
   border-bottom-left-radius: 40%;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 80%;
   border-top-right-radius: 30%;
   transform: rotate(75deg);
-  -webkit-animation: walk-leg-left-center infinite 2s;
-          animation: walk-leg-left-center infinite 2s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: cat-leg-two-walk infinite 2s;
+          animation: cat-leg-two-walk infinite 2s;
 }
-.cat .cat-body-frame .cat-leg-left-center .cat-leg-left-center-pillow {
+.cat .cat-body-frame .cat-leg-two .cat-leg-two-pillow {
   z-index: 95;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: -71%;
   left: 79%;
   width: 29%;
   height: 175%;
   border-radius: 50% 39% 50% 50%;
   transform: rotate(13deg);
-  border: 1px solid black;
-  -webkit-animation: walk-leg-left-center-pillow infinite 2s;
-          animation: walk-leg-left-center-pillow infinite 2s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
+  -webkit-animation: cat-leg-two-pillow-walk infinite 2s;
+          animation: cat-leg-two-pillow-walk infinite 2s;
 }
-.cat .cat-body-frame .cat-leg-right {
+.cat .cat-body-frame .cat-leg-three {
   z-index: 80;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: 59%;
   left: 58%;
   width: 20%;
   height: 6%;
-  border: 1px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
   border-bottom-left-radius: 40%;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 80%;
   border-top-right-radius: 30%;
   transform: rotate(75deg);
+  -webkit-animation: cat-leg-three-walk infinite 2s;
+          animation: cat-leg-three-walk infinite 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
-.cat .cat-body-frame .cat-leg-right .cat-leg-right-pillow {
+.cat .cat-body-frame .cat-leg-three .cat-leg-three-pillow {
   z-index: 95;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: -71%;
   left: 79%;
   width: 29%;
   height: 175%;
   border-radius: 50% 39% 50% 50%;
   transform: rotate(13deg);
-  border: 1px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
+  -webkit-animation: cat-leg-three-pillow-walk infinite 2s;
+          animation: cat-leg-three-pillow-walk infinite 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
-.cat .cat-body-frame .cat-leg-right-center {
+.cat .cat-body-frame .cat-leg-four {
   z-index: 80;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: 58%;
   left: 67%;
   width: 20%;
   height: 6%;
-  border: 1px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
   border-bottom-left-radius: 40%;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 80%;
   border-top-right-radius: 30%;
   transform: rotate(75deg);
+  -webkit-animation: cat-leg-four-walk infinite 2s;
+          animation: cat-leg-four-walk infinite 2s;
 }
-.cat .cat-body-frame .cat-leg-right-center .cat-leg-right-center-pillow {
+.cat .cat-body-frame .cat-leg-four .cat-leg-four-pillow {
   z-index: 95;
   position: absolute;
-  background-color: #fdf4f5;
+  background-color: #f9e2af;
   top: -71%;
   left: 79%;
   width: 29%;
   height: 175%;
   border-radius: 50% 39% 50% 50%;
   transform: rotate(13deg);
-  border: 1px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.3411764706);
+  -webkit-animation: cat-leg-four-pillow-walk infinite 2s;
+          animation: cat-leg-four-pillow-walk infinite 2s;
 }
